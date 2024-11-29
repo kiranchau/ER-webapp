@@ -1,0 +1,222 @@
+@import '../SCSS/cssVariable.scss';
+
+.custPops {
+  width: 75%;
+  background-color: #ffccdc;
+}
+
+.tasksPops {
+  width: 85%;
+  background-color: #ffccdc;
+  transition: width 1s ease-in-out;
+
+  .popBody {
+    display: grid;
+    grid-template-columns: 25em auto;
+    height: 82vh;
+  }
+}
+
+.popups {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  .otpNumber{
+    width: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .addpopups {
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    
+     
+    .popBody::-webkit-scrollbar {
+      background-color: $lightLogo1-color;
+      width: 7px;
+      border-radius: 30px;
+    
+    }
+    
+    
+    .popBody::-webkit-scrollbar-thumb {
+      background-color: $lightLogo1-color;
+      border-radius: 30px;
+    }
+    
+    *::-webkit-scrollbar:hover {
+      width: 12px;
+      transition: width 0.5s ease-in;
+    
+    }
+    
+    *:hover::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 30px;
+    }
+    .popBody {
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+  }
+
+
+
+ 
+
+  .popfoot {
+    background-color: $white-color;
+    box-shadow: 0px -4px 4px rgba($color: #000000, $alpha: 0.25);
+    z-index: 99;
+
+    .cclBtn {
+      background-color: $light-color;
+      color: $primary-color;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    outline: none;
+    font-size: $mainFntSize;
+    transition: 0.3s;
+
+    color: #707070;
+    margin-top: 10px;
+  }
+
+  .custInput {
+    padding: 10px 0px;
+
+    label {
+      padding-left: 5px;
+
+    }
+
+    input {
+      font-size: 20px;
+    }
+
+  }
+
+  .bgColors {
+    label {
+      background-color: #FFCCDC;
+    }
+  }
+
+  select {
+    height: 100px;
+    position: relative;
+    overflow-x: scroll;
+  }
+
+  .popSubTitle {
+    background-color: $white-color;
+    border-bottom: 1px solid $primary-color;
+
+    .popSubBtn {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .custTable {
+
+    table {
+      width: 100%;
+
+      th {
+        @include tableth();
+      }
+
+      td {
+        @include tabletd();
+      }
+
+
+
+      tr:nth-child(even) {
+        background-color: $white-color;
+      }
+
+      tr:nth-child(odd) {
+        background-color: $light-color;
+      }
+
+      .clrStatus {
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        box-shadow: $insetShadow;
+      }
+
+      .grpofBtn {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .wblink {
+          background-color: $primary-color;
+          color: $white-color;
+          font-size: $smallFntSize;
+        }
+
+        .wblink:hover {
+          background-color: $logo2-color !important;
+          color: $primary-color;
+        }
+
+        .edit {
+          @include tableIcon(#fff500);
+        }
+
+        .delete {
+          @include tableIcon(#FF6161);
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+.addCust {
+  width: 33.33%;
+  margin-bottom: 15px;
+}
+
+
+.form-floating {
+  @include InputFields();
+}
+
+@media screen and (max-width: 762px){
+  .popups{
+    .addpopups{
+      width: 95%;
+      margin: 0 auto;
+    }
+    .add-job-content{
+      flex-direction: column!important;
+      .input-wrap{
+        width: 100%!important;
+        padding-right: 0!important;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,5 @@
+/* Hide the show password button in Edge and IE */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}

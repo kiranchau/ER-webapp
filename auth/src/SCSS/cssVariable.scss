@@ -1,0 +1,242 @@
+@font-face {
+  font-family: InterTightRegular;
+  src: url(http://localhost:8082/public/InterTight-Regular.ttf);
+}
+@font-face {
+  font-family: InterTightMedium;
+  src: url(http://localhost:8082/public/InterTight-Medium.ttf);
+}
+@font-face {
+  font-family: InterTightLight;
+  src: url(http://localhost:8082/public/InterTight-Light.ttf);
+}
+@font-face {
+  font-family: InterTightBold;
+  src: url(http://localhost:8082/public/InterTight-SemiBold.ttf);
+}
+
+//set a color
+$primary-color: #2c0036;
+$logo1-color: #242020;
+$logo2-color: #D9D9D9;
+$lightLogo1-color: #EDE7EE;
+$white-color: #ffffff;
+$light-color: #F6EFF6;
+$light-color3: #E4D0E4;
+$light-primary: #C8BACB;
+$bgGrey-color: #efefef;
+$blurBg: '../../images/BlurBg.png';
+
+//set a fount-size
+$largeFntSize: 32px;
+$mainFntSize: 16px;
+$commonFntSize: 14px;
+$smallFntSize: 10px;
+
+//set a font-family
+$commonfntFmly: InterTightRegular;
+$lightFntFmly: InterTightlight;
+$capFntFmly: poppinsSemibold;
+$regularntFmly: InterTightRegular;
+$FntFmlysSemiBold: InterTightBold;
+
+//set a shadow
+$insetShadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25);
+$shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+//set mixin 
+@mixin icons($iconColor: #fff) {
+    padding: 0px 5px;
+    font-size: 2.5em;
+    color: $iconColor;
+}
+
+@mixin PadTable() {
+    padding: 30px 10px 20px 10px;
+}
+
+@mixin tableth() {
+    padding: 10px 5px;
+    border-bottom: 2px solid $primary-color;
+    background-color: $light-color3;
+    position: sticky;
+    top: 0px;
+}
+
+@mixin tabletd() {
+    padding: 15px 5px;
+    font-family: $lightFntFmly;
+    line-height: 1;
+}
+
+@mixin tableIcon($bgColor: '#000000') {
+    background-color: $bgColor;
+    width: 25px;
+    height: 25px;
+}
+
+@mixin InputFields() {
+    label::after {
+        background-color: transparent !important;
+
+    }
+
+    label {
+        color: $primary-color !important;
+    }
+
+    .form-control {
+        border: none;
+        border: 2px solid #CCABCD;
+        border-radius: 5px;
+        
+    }
+
+
+    .form-control:focus {
+        border: none;
+        border: 2px solid $primary-color;
+        box-shadow: none;
+        outline: none;
+        
+    }
+
+    .form-control:focus~label::after {
+        color: $primary-color !important;
+        background-color: transparent !important;
+    }
+
+    .form-control:focus~label {
+        color: $primary-color !important;
+    }
+
+    .form-select {
+        border: none;
+        border: 2px solid #CCABCD;
+        border-radius: 5px;
+        
+
+    }
+
+    .form-select:focus {
+        border: none;
+        border: 2px solid $primary-color;
+        box-shadow: none;
+        outline: none;
+            }
+
+    .form-select~label::after {
+        color: black !important;
+        background-color: transparent !important;
+    }
+
+    .form-select~label {
+        color: $primary-color !important;
+    }
+
+}
+
+@mixin primaryButton(){
+    .button{
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 20rem;
+        border: none;
+        box-shadow: $insetShadow;
+        box-shadow: $shadow;
+        font-family: $commonfntFmly;
+        font-size: $commonFntSize;
+        display: inline;
+        width: fit-content;
+    }
+    .button:hover{
+        background-color: $logo2-color;
+        color: $primary-color;
+    }
+}
+
+.mainpopups{
+    position: absolute;
+   width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    transition: right 1s ease-in-out;
+    .blurBg{
+      background: rgba($color: $primary-color, $alpha: 0.6);
+      height: 100%;
+      z-index: -99;
+      position: relative;
+    }
+    @keyframes in-out {
+      0% {
+        width: 0vw;
+      }
+      100% {
+        width: 100vw;
+      }
+    }
+  }
+  
+  .nomainpopups{
+    position: absolute;
+    width: 100vw;
+   top:0;
+   right:-100%;
+    transition: right 1s ease-in-out;
+  }
+  
+.centerpopups{
+    position: absolute;
+   width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    transition: top 0.5s ease-in-out;
+    .blurBg{
+        background: rgba($color: $primary-color, $alpha: 0.6);
+      height: 100%;
+      z-index: -99;
+      position: relative;
+      filter: blur(1px);
+      -webkit-filter:blur(1px) ;
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    }
+    @keyframes in-out {
+      0% {
+        width: 0vw;
+      }
+      100% {
+        width: 100vw;
+      }
+    }
+  }
+  
+  .nocenterpopups{
+    position: absolute;
+    width: 100vw;
+   top:-100%;
+   right:0%;
+    transition: top 0.5s ease-in-out;
+  }
+
+  @mixin contentHearderBtn(){
+      .myBtnStyle{
+        background: transparent;
+        color: $logo2-color;
+        font-size: 0.9em;
+        border: 2px solid $logo2-color;
+        cursor: pointer;
+    }
+    .myBtnStyle:hover{
+        background-color: $logo2-color;
+        transition: all 0.3ms;
+        color: $primary-color;
+    }
+  }

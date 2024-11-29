@@ -1,0 +1,223 @@
+# Auth subproject
+# Node modules
+auth/node_modules/
+
+# Logs
+auth/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+auth/.env
+auth/.env.local
+auth/.env.development.local
+auth/.env.test.local
+auth/.env.production.local
+
+# Build directories
+auth/build/
+auth/dist/
+
+# Dependency directories
+auth/jspm_packages/
+
+# Coverage directories used by testing tools
+auth/coverage/
+
+# IDE specific files
+auth/.vscode/
+auth/.idea/
+auth/*.sublime-project
+auth/*.sublime-workspace
+
+# Temporary files
+auth/*.swp
+auth/*.swo
+auth/*.tmp
+auth/*.temp
+
+# MacOS specific files
+auth/.DS_Store
+
+# Linux specific files
+auth/*~
+
+# Windows specific files
+auth/Thumbs.db
+auth/ehthumbs.db
+
+# Miscellaneous
+auth/*.sass-cache
+auth/*.eslintcache
+auth/npm-debug.log*
+auth/yarn-debug.log*
+auth/yarn-error.log*
+auth/.pnp.*
+auth/.pnp.js
+
+# Webpack cache (if using Webpack)
+auth/webpack/webpack.cache/
+auth/.cache-loader/
+
+# Package lock file
+auth/package-lock.json
+
+# Container subproject
+# Node modules
+container/node_modules/
+
+# Logs
+container/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+container/.env
+container/.env.local
+container/.env.development.local
+container/.env.test.local
+container/.env.production.local
+
+# Build directories
+container/build/
+container/dist/
+
+# Dependency directories
+container/jspm_packages/
+
+# Coverage directories used by testing tools
+container/coverage/
+
+# IDE specific files
+container/.vscode/
+container/.idea/
+container/*.sublime-project
+container/*.sublime-workspace
+
+# Temporary files
+container/*.swp
+container/*.swo
+container/*.tmp
+container/*.temp
+
+# MacOS specific files
+container/.DS_Store
+
+# Linux specific files
+container/*~
+
+# Windows specific files
+container/Thumbs.db
+container/ehthumbs.db
+
+# Miscellaneous
+container/*.sass-cache
+container/*.eslintcache
+container/npm-debug.log*
+container/yarn-debug.log*
+container/yarn-error.log*
+container/.pnp.*
+container/.pnp.js
+
+# Webpack cache (if using Webpack)
+container/webpack/webpack.cache/
+container/.cache-loader/
+
+# Package lock file
+container/package-lock.json
+
+# Dashboard subproject
+# Node modules
+dashboard/node_modules/
+
+# Logs
+dashboard/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+dashboard/.env
+dashboard/.env.local
+dashboard/.env.development.local
+dashboard/.env.test.local
+dashboard/.env.production.local
+
+# Build directories
+dashboard/build/
+dashboard/dist/
+
+# Dependency directories
+dashboard/jspm_packages/
+
+# Coverage directories used by testing tools
+dashboard/coverage/
+
+# IDE specific files
+dashboard/.vscode/
+dashboard/.idea/
+dashboard/*.sublime-project
+dashboard/*.sublime-workspace
+
+# Temporary files
+dashboard/*.swp
+dashboard/*.swo
+dashboard/*.tmp
+dashboard/*.temp
+
+# MacOS specific files
+dashboard/.DS_Store
+
+# Linux specific files
+dashboard/*~
+
+# Windows specific files
+dashboard/Thumbs.db
+dashboard/ehthumbs.db
+
+# Miscellaneous
+dashboard/*.sass-cache
+dashboard/*.eslintcache
+dashboard/npm-debug.log*
+dashboard/yarn-debug.log*
+dashboard/yarn-error.log*
+dashboard/.pnp.*
+dashboard/.pnp.js
+
+# Webpack cache (if using Webpack)
+dashboard/webpack/webpack.cache/
+dashboard/.cache-loader/
+
+# Package lock file
+dashboard/package-lock.json
+
+# Root project files
+# Docker files
+docker-compose.yml
+Dockerfile
+
+# Miscellaneous project-wide ignores
+.DS_Store
+*.swp
+*.swo
+*.tmp
+*.temp
+.pnp.*
+.pnp.js
+
+# Generated documentation
+docs/
+
+# Lerna
+lerna-debug.log
+
+# eslint
+.eslintcache
+
+# Parcel-bundler cache (if using Parcel)
+.cache/
